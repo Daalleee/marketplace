@@ -1,0 +1,659 @@
+/* Warna tema putih dan putih gelap */
+:root {
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --medium-gray: #e9ecef;
+    --dark-gray: #6c757d;
+    --darker-gray: #495057;
+    --black: #000000;
+    --near-black: #212529;
+    --border-color: #dee2e6;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya tema putih keseluruhan */
+body {
+    background-color: var(--white);
+    color: var(--black);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+/* Gaya untuk navbar putih */
+.navbar {
+    background-color: var(--white) !important;
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+.navbar-brand {
+    color: var(--near-black) !important;
+    font-weight: 600;
+}
+
+.navbar-brand:hover {
+    color: var(--darker-gray) !important;
+}
+
+.navbar-nav .nav-link {
+    color: var(--near-black) !important;  /* Tetap terlihat jelas sebelum hover */
+    transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: var(--black) !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--black) !important;
+    font-weight: 500;
+}
+
+/* Tombol utama */
+.btn-primary-blue {
+    background-color: var(--near-black);
+    border-color: var(--near-black);
+    color: var(--white);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-blue:hover {
+    background-color: var(--black);
+    border-color: var(--black);
+    color: var(--white);
+    transform: translateY(-1px);
+}
+
+.btn-primary-blue:focus,
+.btn-primary-blue.focus {
+    box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.25);
+}
+
+/* Card produk dengan gaya putih bersih */
+.card-product {
+    background-color: var(--white);
+    border: 1px solid var(--medium-gray);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px var(--shadow);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    color: var(--black);
+}
+
+.card-product:hover {
+    box-shadow: 0 6px 20px var(--shadow);
+    transform: translateY(-2px);
+    border-color: var(--dark-gray);
+}
+
+/* Tombol beli, tambah ke keranjang, jual barang - dihapus karena sudah digabung di atas */
+
+/* Tombol dengan tema putih */
+.btn-light {
+    background-color: var(--white);
+    border: 1px solid var(--medium-gray);
+    color: var(--near-black);
+}
+
+.btn-light:hover {
+    background-color: var(--light-gray);
+    border-color: var(--dark-gray);
+    color: var(--near-black);
+}
+
+/* Input dan form */
+.form-control {
+    background-color: var(--white);
+    border: 1px solid var(--medium-gray);
+    border-radius: 6px;
+    color: var(--black);
+    transition: border-color 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: var(--dark-gray);
+    box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.25);
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.form-select {
+    background-color: var(--white);
+    border: 1px solid var(--medium-gray);
+    border-radius: 6px;
+    color: var(--black);
+}
+
+.form-select:focus {
+    border-color: var(--dark-gray);
+    box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.25);
+    background-color: var(--white);
+    color: var(--black);
+}
+
+/* Alert */
+.alert {
+    border-radius: 8px;
+    border: none;
+    color: var(--black);
+}
+
+.alert-success {
+    background-color: var(--light-gray);
+    color: var(--darker-gray);
+}
+
+.alert-danger {
+    background-color: var(--light-gray);
+    color: var(--darker-gray);
+}
+
+/* Teks */
+.text-primary-blue {
+    color: var(--near-black) !important;
+}
+
+a.text-primary-blue:hover {
+    color: var(--black) !important;
+}
+
+/* Kondisi barang - konsisten dengan tema putih dan gelap */
+.badge-condition {
+    background-color: var(--light-gray);
+    color: var(--near-black);
+    border: 1px solid var(--medium-gray);
+    border-radius: 4px;
+    font-size: 0.8em;
+    padding: 4px 8px;
+    font-weight: normal;
+}
+
+/* Kondisi barang spesifik - tetap dalam nuansa putih dan gelap */
+.badge-condition.baru {
+    background-color: var(--light-gray);
+    color: var(--near-black);
+    border: 1px solid var(--medium-gray);
+}
+
+.badge-condition.bekas_baik {
+    background-color: var(--light-gray);
+    color: var(--near-black);
+    border: 1px solid var(--medium-gray);
+}
+
+.badge-condition.bekas_sedang {
+    background-color: var(--light-gray);
+    color: var(--near-black);
+    border: 1px solid var(--medium-gray);
+}
+
+.badge-condition.bekas_kurang {
+    background-color: var(--light-gray);
+    color: var(--near-black);
+    border: 1px solid var(--medium-gray);
+}
+
+/* Link login dan register - tetap terlihat jelas sebelum hover */
+.navbar-nav .btn-outline-light {
+    color: var(--near-black) !important;  /* Tetap terlihat jelas */
+    border-color: var(--medium-gray) !important;
+    background-color: var(--white) !important;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .btn-outline-light:hover {
+    color: var(--white) !important;
+    background-color: var(--near-black) !important;
+    border-color: var(--near-black) !important;
+}
+
+/* Link lainnya - tetap terlihat jelas sebelum hover */
+a {
+    color: var(--near-black);
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--black);
+}
+
+/* Link di navbar dropdown */
+.navbar-nav .dropdown-item {
+    color: var(--near-black) !important;
+}
+
+.navbar-nav .dropdown-item:hover {
+    color: var(--black) !important;
+    background-color: var(--light-gray);
+}
+
+/* Footer putih dengan teks gelap */
+footer {
+    background-color: var(--white) !important;
+    color: var(--near-black);
+    border-top: 1px solid var(--medium-gray);
+    margin-bottom: 0;
+}
+
+footer a {
+    color: var(--dark-gray);
+}
+
+footer a:hover {
+    color: var(--near-black);
+}
+
+/* Main content */
+main {
+    flex: 1;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+/* Untuk navbar sticky-top */
+main.py-4 {
+    margin-top: 0;
+}
+
+/* Agar tidak ada conflict saat menggunakan anchor link */
+.sticky-top {
+    z-index: 1020;
+}
+
+/* Banner Image Section */
+.banner-section {
+    max-width: calc(100% - 2rem);
+    margin: 0 auto;
+    position: relative;
+    background-color: var(--white);
+}
+
+.banner-section img {
+    transition: opacity 0.3s ease;
+}
+
+.banner-section img:hover {
+    opacity: 0.95;
+}
+
+/* Header section styling */
+.header-section {
+    background: var(--white);
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .btn-primary-blue,
+    .btn-buy,
+    .btn-add-to-cart,
+    .btn-sell,
+    .btn-outline-light {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    body {
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsive adjustments for banner */
+@media (max-width: 768px) {
+    .banner-section {
+        max-width: 100%;
+        margin: 0;
+    }
+}
+
+/* Teks produk */
+.card-title {
+    color: var(--black);
+}
+
+.card-text {
+    color: var(--black);
+}
+
+/* Teks dalam form dan input */
+label {
+    color: var(--near-black);
+}
+
+/* Tombol dalam konteks lain */
+.btn {
+    transition: all 0.3s ease;
+    color: var(--white);
+}
+
+.btn:focus {
+    box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.25) !important;
+}
+
+/* Teks untuk semua elemen */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--black);
+}
+
+p {
+    color: var(--black);
+}
+
+small {
+    color: var(--dark-gray);
+}
+
+.text-muted {
+    color: var(--dark-gray) !important;
+}
+
+/* Tombol dropdown */
+.dropdown-menu {
+    background-color: var(--white);
+    border: 1px solid var(--medium-gray);
+    color: var(--black);
+}
+
+.dropdown-item {
+    color: var(--near-black);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: var(--light-gray);
+    color: var(--black);
+}
+
+/* Tabel */
+.table {
+    color: var(--black);
+}
+
+.table th {
+    color: var(--near-black);
+    border-color: var(--medium-gray);
+}
+
+.table td {
+    border-color: var(--medium-gray);
+}
+
+/* Badge - konsisten dengan tema putih dan gelap */
+.badge {
+    background-color: var(--light-gray);
+    color: var(--near-black);
+    border: 1px solid var(--medium-gray);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+/* Badge custom dengan warna hijau #4cd137 */
+.bg-success-custom {
+    background-color: #4cd137 !important;
+    color: var(--black) !important;
+    font-weight: 700 !important;
+    font-size: 0.95rem !important;
+    padding: 6px 10px !important;
+    border-radius: 4px !important;
+}
+
+/* Badge warna khusus - tetap dalam tema putih dan gelap */
+.alert {
+    background-color: var(--light-gray);
+    border: 1px solid var(--medium-gray);
+    color: var(--near-black);
+}
+
+.alert-success {
+    background-color: var(--light-gray);
+    border-color: var(--medium-gray);
+    color: var(--darker-gray);
+}
+
+.alert-danger {
+    background-color: var(--light-gray);
+    border-color: var(--medium-gray);
+    color: var(--darker-gray);
+}
+
+.alert-warning {
+    background-color: var(--light-gray);
+    border-color: var(--medium-gray);
+    color: var(--darker-gray);
+}
+
+/* Card */
+.card {
+    background-color: var(--white);
+    border: 1px solid var(--medium-gray);
+    color: var(--black);
+}
+
+.card-header {
+    background-color: var(--light-gray);
+    border-color: var(--medium-gray);
+    color: var(--near-black);
+}
+
+.card-body {
+    color: var(--black);
+}
+
+.card-footer {
+    background-color: var(--light-gray);
+    border-color: var(--medium-gray);
+    color: var(--near-black);
+}
+
+/* Modal */
+.modal-content {
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid var(--medium-gray);
+}
+
+.modal-header {
+    background-color: var(--light-gray);
+    border-color: var(--medium-gray);
+    color: var(--near-black);
+}
+
+.modal-footer {
+    background-color: var(--light-gray);
+    border-color: var(--medium-gray);
+    color: var(--near-black);
+}
+
+/* Progress bar */
+.progress {
+    background-color: var(--light-gray);
+    border-radius: 4px;
+}
+
+.progress-bar {
+    background-color: var(--near-black);
+}
+
+/* List group */
+.list-group-item {
+    background-color: var(--white);
+    border: 1px solid var(--medium-gray);
+    color: var(--black);
+}
+
+.list-group-item.active {
+    background-color: var(--near-black);
+    border-color: var(--near-black);
+    color: var(--white);
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    background-color: var(--light-gray);
+}
+
+.breadcrumb-item a {
+    color: var(--near-black);
+}
+
+.breadcrumb-item a:hover {
+    color: var(--black);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: var(--dark-gray);
+}
+
+/* Pagination */
+.page-link {
+    color: var(--near-black);
+    background-color: var(--white);
+    border: 1px solid var(--medium-gray);
+}
+
+.page-item.active .page-link {
+    background-color: var(--near-black);
+    border-color: var(--near-black);
+    color: var(--white);
+}
+
+.page-link:hover {
+    color: var(--black);
+    background-color: var(--light-gray);
+    border-color: var(--dark-gray);
+}
+
+/* Nav tabs */
+.nav-tabs .nav-link {
+    color: var(--near-black);
+    border-top: 1px solid var(--medium-gray);
+    border-right: 1px solid var(--medium-gray);
+    border-left: 1px solid var(--medium-gray);
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--black);
+    background-color: var(--white);
+    border-color: var(--medium-gray);
+    border-bottom-color: var(--white);
+}
+
+/* Status produk - gunakan warna lebih terang sesuai permintaan */
+.status-available {
+    background-color: #d1f2d1;  /* hijau muda terang */
+    color: #4cd137;  /* hijau terang #4cd137 */
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-weight: 700;  /* lebih tebal */
+    font-size: 0.95rem;  /* sedikit lebih besar */
+    border: 1px solid rgba(76, 209, 55, 0.2);
+}
+
+.status-sold {
+    background-color: #f9c9c5;  /* merah muda terang */
+    color: #e84118;  /* merah terang #e84118 */
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-weight: 700;  /* lebih tebal */
+    font-size: 0.95rem;  /* sedikit lebih besar */
+    border: 1px solid rgba(232, 65, 24, 0.2);
+}
+
+/* Status pembayaran - warna lebih terang sesuai permintaan, font lebih tebal dan besar */
+.status-pending {
+    background-color: #f9e79f;  /* kuning muda terang */
+    color: #e1b12c;  /* kuning terang #e1b12c */
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-weight: 700;  /* lebih tebal */
+    font-size: 0.95rem;  /* sedikit lebih besar */
+    border: 1px solid rgba(225, 177, 44, 0.2);
+}
+
+.status-success, .status-paid, .status-lunas, .status-confirmed, .status-shipped, .status-delivered {
+    background-color: #d1f2d1;  /* hijau muda terang */
+    color: #4cd137;  /* hijau terang #4cd137 */
+    padding: 6px 10px;  /* sedikit lebih besar */
+    border-radius: 4px;
+    font-weight: 700;  /* lebih tebal */
+    font-size: 0.95rem;  /* sedikit lebih besar */
+    border: 1px solid rgba(76, 209, 55, 0.2);
+}
+
+.status-failed, .status-cancelled {
+    background-color: #f9c9c5;  /* merah muda terang */
+    color: #e84118;  /* merah terang #e84118 */
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-weight: 700;  /* lebih tebal */
+    font-size: 0.95rem;  /* sedikit lebih besar */
+    border: 1px solid rgba(232, 65, 24, 0.2);
+}
+
+.status-warning, .status-process {
+    background-color: #f9e79f;  /* kuning muda terang */
+    color: #e1b12c;  /* kuning terang #e1b12c */
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-weight: 700;  /* lebih tebal */
+    font-size: 0.95rem;  /* sedikit lebih besar */
+    border: 1px solid rgba(225, 177, 44, 0.2);
+}
+
+/* Tombol aksi - harus terlihat jelas sebelum hover */
+.btn, .btn-social, .btn-action, .btn-buy, .btn-add-to-cart, .btn-sell {
+    background-color: var(--near-black);
+    border: 1px solid var(--near-black);
+    color: var(--white);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover, .btn-social:hover, .btn-action:hover, .btn-buy:hover, .btn-add-to-cart:hover, .btn-sell:hover {
+    background-color: var(--black);
+    border-color: var(--black);
+    color: var(--white);
+    transform: translateY(-1px);
+}
+
+/* Tombol dengan tema putih */
+.btn-light {
+    background-color: var(--white);
+    border: 1px solid var(--medium-gray);
+    color: var(--near-black);
+}
+
+.btn-light:hover {
+    background-color: var(--light-gray);
+    border-color: var(--dark-gray);
+    color: var(--near-black);
+}
+
+/* Tombol outline */
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--near-black);
+    color: var(--near-black);
+}
+
+.btn-outline:hover {
+    background-color: var(--near-black);
+    border-color: var(--near-black);
+    color: var(--white);
+}
