@@ -20,7 +20,8 @@ class Product extends Model
         'description',
         'image',
         'status',
-        'stock'
+        'stock',
+        'location'
     ];
 
     protected $casts = [
@@ -49,5 +50,23 @@ class Product extends Model
     public function orderItems(): HasMany
     {
         return $this->hasMany(OrderItem::class);
+    }
+
+    // Relasi ke review produk
+    public function reviews(): HasMany
+    {
+        return $this->hasMany(Review::class);
+    }
+
+    // Fungsi untuk menghitung rating rata-rata
+    public function getAverageRatingAttribute()
+    {
+        return $this->reviews()->avg('rating') ?: 0;
+    }
+
+    // Fungsi untuk menghitung jumlah review
+    public function getReviewCountAttribute()
+    {
+        return $this->reviews()->count();
     }
 }

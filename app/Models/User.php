@@ -47,4 +47,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    // Relasi ke review yang dibuat oleh user
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
 }
