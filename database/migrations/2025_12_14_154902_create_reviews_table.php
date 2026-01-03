@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');  // Sesuai dengan tipe data id di tabel users
-            $table->unsignedInteger('product_id');  // Sesuai dengan tipe data id di tabel products
+            $table->unsignedBigInteger('product_id');  // Sesuai dengan tipe data id di tabel products
             $table->integer('rating')->unsigned(); // 1-5 stars
             $table->text('comment')->nullable();
             $table->timestamps();

@@ -11,7 +11,10 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        $middleware->validateCsrfTokens(except: [
+            'midtrans/callback',
+            'midtrans/*', // atau bisa juga seperti ini untuk semua subroute
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
